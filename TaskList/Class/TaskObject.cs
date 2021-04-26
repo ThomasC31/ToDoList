@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace TaskList.Class
 {
-    public class Task
+    public class TaskObject
     {
         public string TaskName { get; set; }
         public string TaskDesc { get; set; }

@@ -1,5 +1,25 @@
-﻿<h3>TodoList</h3>
+﻿@page "/tasks"
 
-@code {
 
-}
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nom de la tâche</th>
+            <th scope="col">Description</th>
+            <th scope="col">Etat</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in tasks)
+        {
+        <tr>
+            <td>@task.TaskName</td>
+            <td>@task.TaskDesc</td>
+            <td>@task.isActive.ToString()</td>
+            <td><button class="btn btn-primary Button-Action" style="margin-right:3px;"><i class="far fa-trash-alt"></i></button><button class="btn btn-danger Button-Action"><i class="fas fa-pen"></i></button></td>
+        </tr>
+        }
+
+    </tbody>
+</table>
