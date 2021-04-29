@@ -33,5 +33,10 @@ namespace TaskList.Pages
                 tasks.Add((TaskObject)result.Data);
             }
         }
+
+        async Task DeleteTask(TaskObject task)
+        {
+            tasks.Remove(task);
+        }
     }
 }

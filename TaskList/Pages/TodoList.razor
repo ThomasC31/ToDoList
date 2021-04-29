@@ -17,7 +17,7 @@
             <td>@task.TaskName</td>
             <td>@task.TaskDesc</td>
             <td>@task.isActive.ToString()</td>
-            <td><button class="btn btn-primary Button-Action" style="margin-right:3px;"><i class="far fa-trash-alt"></i></button><button class="btn btn-danger Button-Action"><i class="fas fa-pen"></i></button></td>
+            <td><button @onclick="@(()=>DeleteTask(task))" class="btn btn-danger Button-Action" style="margin-right:3px;"><i class="far fa-trash-alt"></i></button><button class="btn btn-primary Button-Action"><i class="fas fa-pen"></i></button></td>
         </tr>
         }
 
