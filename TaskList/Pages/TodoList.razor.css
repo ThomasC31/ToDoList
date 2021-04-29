@@ -5,3 +5,10 @@
 .Button-Open{
     width:9rem;
 }
+
+.Description-Text {
+    max-width: 15rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: "…";
+}
