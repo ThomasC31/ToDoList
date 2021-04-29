@@ -1,5 +1,7 @@
-﻿<h3>Create</h3>
+﻿<label>Nom de la tâche</label>
+<input @bind="@TaskName" />
 
-@code {
+<label>Description de la tâche</label>
+<input @bind="@TaskDesc" />
 
-}
+<button @onclick="SubmitForm"/>
