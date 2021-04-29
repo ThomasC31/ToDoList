@@ -1,7 +1,11 @@
-﻿<label>Nom de la tâche</label>
-<input @bind="@TaskName" />
+﻿<div class="Create-Modal">
+    <label>Nom de la tâche</label><br/>
+    <input type="text" @bind="@TaskName" /><br /><br />
 
-<label>Description de la tâche</label>
-<input @bind="@TaskDesc" />
+    <label>Description de la tâche</label><br />
+    <input type="text" @bind="@TaskDesc" /><br /><br />
 
-<button @onclick="SubmitForm"/>
+    <div class="Button-Validate-Div">
+        <button style="margin-top:1rem;" class="btn btn-primary Button-Open" @onclick="SubmitForm">Créer</button>
+    </div>
+</div>
