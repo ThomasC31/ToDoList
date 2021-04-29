@@ -45,15 +45,6 @@ namespace TaskList.Pages
             parameters.Add(nameof(EditModal.Task), task);
             var taskModal = Modal.Show<EditModal>("Editer une tâche", parameters);
             var result = await taskModal.Result;
-
-            if (result.Cancelled)
-            {
-                Console.WriteLine("Modal was cancelled");
-            }
-            else
-            {
-                tasks.Add((TaskObject)result.Data);
-            }
         }
     }
 }

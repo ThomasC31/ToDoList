@@ -12,3 +12,7 @@
     white-space: nowrap;
     text-overflow: "…";
 }
+
+.Inactive {
+    opacity:0.4;
+}

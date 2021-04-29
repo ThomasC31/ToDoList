@@ -13,10 +13,10 @@
     <tbody>
         @foreach (var task in tasks)
         {
-        <tr>
+        <tr class=@(task.isActive ? "" : "Inactive")>
             <td class="Description-Text">@task.TaskName</td>
             <td class="Description-Text">@task.TaskDesc</td>
-            <td class="Description-Text">@task.isActive.ToString()</td>
+            <td class="Description-Text">@(task.isActive ? "Active" : "Inactive")</td>
             <td class="Description-Text"><button @onclick="@(()=>DeleteTask(task))" class="btn btn-danger Button-Action" style="margin-right:3px;"><i class="far fa-trash-alt"></i></button><button @onclick="@(()=>OnOpenEditModal(task))" class="btn btn-primary Button-Action"><i class="fas fa-pen"></i></button></td>
         </tr>
         }
