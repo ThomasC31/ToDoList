@@ -10,7 +10,7 @@ using TaskList.Pages.modals;
 
 namespace TaskList.Pages
 {
-    public partial class TodoList
+    public partial class Index
     {
         private List<TaskObject> tasks = new List<TaskObject>();
         [CascadingParameter] public IModalService Modal { get; set; }
@@ -28,7 +28,7 @@ namespace TaskList.Pages
         {
             var taskModal = Modal.Show<CreateModal>("Créer une tâche");
             var result = await taskModal.Result;
-            
+
             if (result.Cancelled)
             {
                 Console.WriteLine("Modal was cancelled");

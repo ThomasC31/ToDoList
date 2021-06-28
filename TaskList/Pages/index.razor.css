@@ -1,9 +1,9 @@
 ﻿.Button-Action {
-    width:3rem;
+    width: 3rem;
 }
 
-.Button-Open{
-    width:9rem;
+.Button-Open {
+    width: 9rem;
 }
 
 .Description-Text {
@@ -14,5 +14,5 @@
 }
 
 .Inactive {
-    opacity:0.4;
+    opacity: 0.4;
 }

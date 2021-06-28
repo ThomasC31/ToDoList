@@ -1,3 +1,28 @@
 ﻿@page "/"
 
-<h1>Tasklist sous projet 4</h1>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th style="width:5rem" scope="col">Nom de la tâche</th>
+            <th style="width: 15rem" scope="col">Description</th>
+            <th style="width: 5rem" scope="col">Etat</th>
+            <th style="width: 5rem" scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in tasks)
+        {
+            <tr class=@(task.isActive ? "" : "Inactive")>
+                <td class="Description-Text">@task.TaskName</td>
+                <td class="Description-Text">@task.TaskDesc</td>
+                <td class="Description-Text">@(task.isActive ? "Active" : "Inactive")</td>
+                <td class="Description-Text"><button @onclick="@(()=>DeleteTask(task))" class="btn btn-danger Button-Action" style="margin-right:3px;"><i class="far fa-trash-alt"></i></button><button @onclick="@(()=>OnOpenEditModal(task))" class="btn btn-primary Button-Action"><i class="fas fa-pen"></i></button></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<div>
+    <button @onclick="OnOpenCreateModal" class="btn btn-primary Button-Open" style="margin-right:3px;">Créer une tâche</button>
+</div>
