@@ -11,13 +11,13 @@ namespace TaskList.Pages.modals
 {
     public partial class CreateModal
     {
-        [CascadingParameter] BlazoredModalInstance ModalInstance { get; set; }
-        private string TaskName { get; set; }
-        private string TaskDesc { get; set; }
+        [CascadingParameter] public BlazoredModalInstance ModalInstance { get; set; }
+        public string TaskName { get; set; }
+        public string TaskDesc { get; set; }
 
-        void SubmitForm()
+        public void SubmitForm()
         {
-            ModalInstance.CloseAsync(ModalResult.Ok(new TaskObject() { TaskDesc = TaskDesc, TaskName = TaskName }));
+            ModalInstance.CloseAsync(ModalResult.Ok(new TaskObject() { TaskDesc = TaskDesc, TaskName = TaskName, isActive = true }));
         }
     }
 }

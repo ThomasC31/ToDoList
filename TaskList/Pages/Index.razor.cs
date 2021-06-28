@@ -19,12 +19,12 @@ namespace TaskList.Pages
             tasks = new List<TaskObject>() { new TaskObject { TaskName = "tache 1", TaskDesc = "Description de la premiere tache", isActive = true }, new TaskObject { TaskName = "tache 2", TaskDesc = "Description de la seconde tache", isActive = true }, new TaskObject { TaskName = "tache 3", TaskDesc = "Description de la troisieme tache", isActive = true } };
         }
 
-        async Task DeleteTask(TaskObject task)
+        public async Task DeleteTask(TaskObject task)
         {
             tasks.Remove(task);
         }
 
-        async Task OnOpenCreateModal()
+        public async Task OnOpenCreateModal()
         {
             var taskModal = Modal.Show<CreateModal>("Créer une tâche");
             var result = await taskModal.Result;
@@ -39,7 +39,7 @@ namespace TaskList.Pages
             }
         }
 
-        async Task OnOpenEditModal(TaskObject task)
+        public async Task OnOpenEditModal(TaskObject task)
         {
             var parameters = new ModalParameters();
             parameters.Add(nameof(EditModal.Task), task);

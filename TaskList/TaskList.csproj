@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Blazored.Modal" Version="6.0.1" />
+    <PackageReference Include="bunit" Version="1.1.5" />
   </ItemGroup>
 
 </Project>
