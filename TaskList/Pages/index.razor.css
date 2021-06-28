@@ -1,0 +1,18 @@
+﻿.Button-Action {
+    width: 3rem;
+}
+
+.Button-Open {
+    width: 9rem;
+}
+
+.Description-Text {
+    max-width: 15rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: "…";
+}
+
+.Inactive {
+    opacity: 0.4;
+}
